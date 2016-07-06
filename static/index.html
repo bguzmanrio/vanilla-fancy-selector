@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu" />
+    <link rel="stylesheet" type="text/css" href="./selector.css" />
+    <script type="text/javascript" src="../dist/js/main.min.js"></script>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <h1> Radio selector </h1>
+
+        <h2>Single item: </h2>
+        <div class="container">
+            <a class="stack " href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+            </a>
+        </div>
+
+        <h2> Three items without arrangement</h2>
+        <div class="container">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+
+        <h2> Three items with arrangement</h2>
+        <div class="container">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+
+        <h2> Three items linear</h2>
+        <div class="container">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+
+        <h2> Nine items radius</h2>
+        <div class="container">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var radios = document.querySelectorAll('.fa.fa-plus-circle');
+
+
+        radio.createRadioSelector(radios[0]);
+        radio.createRadioSelector(radios[1]);
+        radio.createRadioSelector(radios[2], {
+            minimumItems: 3,
+            startingAngle: radio.RADS_180
+        });
+        radio.createLinearSelector(radios[3], {
+            startingAngle: radio.RADS_90
+        });
+        radio.createRadioSelector(radios[4], {
+            minimumItems: 1000,
+            startingAngle: radio.RADS_180
+        });
+
+    </script>
+</body>
+
+</html>
