@@ -1,16 +1,3 @@
-body {
-    font-size: 65%;
-    margin: 0;
-    width: 100%;
-}
-h1 {
-    background-color: paleturquoise;
-    padding: 20px 0px 20px 20px;
-}
-h1,
-h2 {
-    font-family: Ubuntu;
-}
 .main-container {
     padding: 10px;
 }
@@ -24,7 +11,7 @@ h2 {
 }
 .stack {
     position: relative;
-    font-size: 3em;
+    font-size: 2em;
     height: 1em;
     width: 1em;
     color: #666;
