@@ -1,6 +1,6 @@
 import Selector from './selector.js';
 
-var LinearSelector = function (button, options) {
+var LinearSelector = function (button, options={startingAngle:Selector.RADS_90}) {
     this.initialize( button, options );
     this.createSelector();
 };

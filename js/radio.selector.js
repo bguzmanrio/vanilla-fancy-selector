@@ -1,6 +1,6 @@
 import Selector from './selector.js';
 
-var RadioSelector = function (button, options) {
+var RadioSelector = function (button, options={}) {
     var offsetAngle = options.startingAngle || 0 ;
     
     options.startingAngle = null;
