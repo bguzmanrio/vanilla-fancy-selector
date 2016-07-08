@@ -65,12 +65,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	window.fancySelector = {
-	    createRadioSelector: function createRadioSelector(button) {
-	        var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	    createRadioSelector: function createRadioSelector(button, options) {
 	        return new _radioSelector2.default(button, options);
 	    },
-	    createLinearSelector: function createLinearSelector(button) {
-	        var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	    createLinearSelector: function createLinearSelector(button, options) {
 	        return new _linearSelector2.default(button, options);
 	    },
 	    RADS_360: _selector2.default.RADS_360,
@@ -99,7 +97,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var RadioSelector = function RadioSelector(button, options) {
+	var RadioSelector = function RadioSelector(button) {
+	    var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
 	    var offsetAngle = options.startingAngle || 0;
 
 	    options.startingAngle = null;
@@ -328,7 +328,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var LinearSelector = function LinearSelector(button, options) {
+	var LinearSelector = function LinearSelector(button) {
+	    var options = arguments.length <= 1 || arguments[1] === undefined ? { startingAngle: _selector2.default.RADS_90 } : arguments[1];
+
 	    this.initialize(button, options);
 	    this.createSelector();
 	};
