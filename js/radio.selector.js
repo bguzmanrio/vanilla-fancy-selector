@@ -2,15 +2,17 @@ import Selector from './selector.js';
 
 var RadioSelector = function (button, options) {
     var offsetAngle = options.startingAngle || 0 ;
+    
     options.startingAngle = null;
-    var selector = new Selector(button, options);
-    selector.incrementalFunction = this.radiusIncremental;
-    selector.positionItem = this.positionItem;
-    selector.offsetAngle = offsetAngle;
-    selector.createSelector();
+    this.offsetAngle = offsetAngle;
+    this.initialize( button, options );
+    this.createSelector();
 };
 
-RadioSelector.prototype.radiusIncremental = function (list, angle, radius, offset, i) {
+RadioSelector.prototype = new Selector();
+RadioSelector.prototype.constructor = RadioSelector;
+
+RadioSelector.prototype.incrementalFunction = function (list, angle, radius, offset, i) {
     this.positionItem(list[i + 1], (i * angle) + this.offsetAngle, radius, offset);
 };
 

@@ -2,7 +2,7 @@ import RadioSelector from './js/radio.selector.js';
 import LinearSelector from './js/linear.selector.js';
 import Selector from './js/selector.js';
 
-window.radio = {
+window.fancySelector = {
     createRadioSelector: function( button, options={} ){ return new RadioSelector( button, options ); },
     createLinearSelector: function( button, options={} ){ return new LinearSelector( button, options ); },
     RADS_360: Selector.RADS_360,
@@ -13,4 +13,4 @@ window.radio = {
     RADS_0: 0  
 };
 
-export default window.radio;
+export default window.fancySelector;

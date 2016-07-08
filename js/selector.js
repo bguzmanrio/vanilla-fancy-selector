@@ -1,11 +1,4 @@
-var Selector = function (button, options) {
-    this.button = button;
-    this.container = this.button.parentElement;
-    this.list = this.container.children;
-    this.minimumItems = options.minimumItems;
-    this.startingAngle = options.startingAngle;
-    this.nItemsAround = this.list.length - 1;
-};
+var Selector = function () {};
 
 Selector.RADS_360 = 2 * Math.PI;
 Selector.RADS_90 = Selector.RADS_360 / 4;
@@ -18,6 +11,15 @@ Selector.SEPARATION = {
     TIGHT: 50,
     NORMAL: 6,
     LOOSE: 3
+};
+
+Selector.prototype.initialize = function (button, options) {
+    this.button = button;
+    this.container = this.button.parentElement;
+    this.list = this.container.children;
+    this.minimumItems = options.minimumItems;
+    this.startingAngle = options.startingAngle;
+    this.nItemsAround = this.list.length - 1;
 };
 
 Selector.prototype.addListener = function () {

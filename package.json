@@ -5,7 +5,7 @@
     "main": "main.js",
     "scripts": {
         "build": "node node_modules/webpack/bin/webpack.js --progress",
-        "test": "node_modules/karma/bin/karma start"
+        "buildPRD": "node node_modules/webpack/bin/webpack.js --progress -p"
     },
     "author": "",
     "license": "MIT",

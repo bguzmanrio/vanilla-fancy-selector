@@ -1,13 +1,14 @@
 import Selector from './selector.js';
 
 var LinearSelector = function (button, options) {
-    var selector = new Selector(button, options);
-    selector.incrementalFunction = this.linearIncremental;
-    selector.positionItem = this.positionItem;
-    selector.createSelector();
+    this.initialize( button, options );
+    this.createSelector();
 };
 
-LinearSelector.prototype.linearIncremental = function (list, angle, radius, offset, i) {
+LinearSelector.prototype = new Selector();
+LinearSelector.prototype.constructor = LinearSelector;
+
+LinearSelector.prototype.incrementalFunction = function (list, angle, radius, offset, i) {
     var calculatedDistance = (i + 1) * offset;
     var sep = (i + 1) * this.separationToUse || calculatedDistance / Selector.SEPARATION.NORMAL;
     this.positionItem(list[i + 1], angle, calculatedDistance, sep);

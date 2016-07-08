@@ -71,18 +71,18 @@
         var radios = document.querySelectorAll('.fa.fa-plus-circle');
 
 
-        radio.createRadioSelector(radios[0]);
-        radio.createRadioSelector(radios[1]);
-        radio.createRadioSelector(radios[2], {
+        fancySelector.createRadioSelector(radios[0]);
+        fancySelector.createRadioSelector(radios[1]);
+        fancySelector.createRadioSelector(radios[2], {
             minimumItems: 3,
-            startingAngle: radio.RADS_180
+            startingAngle: fancySelector.RADS_180
         });
-        radio.createLinearSelector(radios[3], {
-            startingAngle: radio.RADS_90
+        fancySelector.createLinearSelector(radios[3], {
+            startingAngle: fancySelector.RADS_90
         });
-        radio.createRadioSelector(radios[4], {
+        fancySelector.createRadioSelector(radios[4], {
             minimumItems: 1000,
-            startingAngle: radio.RADS_180
+            startingAngle: fancySelector.RADS_180
         });
 
     </script>
