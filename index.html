@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="stylesheets/fancy-selector.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu" />
     <script type="text/javascript" src="javascripts/main.js"></script>
 
     <!--[if lt IE 9]>
@@ -77,6 +79,22 @@
 <li>Simple radio selector: </li>
 </ul>
 
+        <div class="container" id="simple-radio-selector">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+            </a>
+        </div>
+            
+        <script type="text/javascript">
+            fancySelector.createRadioSelector( document.querySelector('#simple-radio-selector i:first-child') );
+        </script>
 <pre><code>        fancySelector.createRadioSelector( mainButton );
 
 </code></pre>
@@ -85,8 +103,25 @@
 <li>Radio selector starting from an specific angle</li>
 </ul>
 
+        <div class="container" id="starting-angle-radio-selector">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+                <i class="fa fa-car"></i>
+            </a>
+        </div>
+        <script type="text/javascript">
+            fancySelector.createRadioSelector( document.querySelector('#starting-angle-radio-selector i:first-child'), {
+                startingAngle: fancySelector.RADS_180
+            } );
+        </script>
 <pre><code>        fancySelector.createRadioSelector( mainButton, {
-            startingAngle: fancySelector.RADS_90
+            startingAngle: fancySelector.RADS_180
         });
 </code></pre>
 
@@ -94,10 +129,24 @@
 <li>Radio selector using the minimum of items to arrange them in just 90 degrees.</li>
 </ul>
 
+        <div class="container" id="arranged-radio-selector">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+        <script type="text/javascript">
+            fancySelector.createRadioSelector( document.querySelector('#arranged-radio-selector i:first-child'), {
+                minimumItems: 3
+            } );
+        </script>
 <pre><code>        fancySelector.createRadioSelector( mainButton, {
             minimumItems: 3
         });
 </code></pre>
+            
 
 <h4>
 <a id="linear-selector" class="anchor" href="#linear-selector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linear selector</h4>
@@ -105,6 +154,18 @@
 <ul>
 <li>Simple linear selector: </li>
 </ul>
+        <div class="container" id="simple-linear-selector">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+            
+        <script type="text/javascript">
+            fancySelector.createLinearSelector( document.querySelector('#simple-linear-selector i:first-child') );
+        </script>
 
 <pre><code>        fancySelector.createLinearSelector( mainButton );
 
@@ -114,8 +175,23 @@
 <li>Linear selector starting from an specific angle</li>
 </ul>
 
+        <div class="container" id="starting-angle-linear-selector">
+            <a class="stack" href="#">
+                <i class="fa fa-plus-circle"></i>
+                <i class="fa fa-car"></i>
+                <i class="fa fa-hotel"></i>
+                <i class="fa fa-plane"></i>
+            </a>
+        </div>
+            
+        <script type="text/javascript">
+            fancySelector.createLinearSelector( document.querySelector('#starting-angle-linear-selector i:first-child'), {
+                startingAngle: fancySelector.RADS_180
+            } );
+        </script>
+            
 <pre><code>        fancySelector.createLinearSelector( mainButton, {
-            startingAngle: fancySelector.RADS_90
+            startingAngle: fancySelector.RADS_180
         });
 </code></pre>
 
