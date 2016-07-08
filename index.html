@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Vanilla-fancy-selector by bguzmanrio</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Vanilla-fancy-selector</h1>
+        <h2></h2>
+        <a href="https://github.com/bguzmanrio/vanilla-fancy-selector" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="radio-and-linear-selector" class="anchor" href="#radio-and-linear-selector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Radio and Linear selector</h1>
+
+<h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h2>
+
+<p>Simple and fancy floating selector to give that special touch to your projects.</p>
+
+<p>Currently there are two types of selector deployers:</p>
+
+<ul>
+<li><strong>Radio Selector</strong></li>
+<li><strong>Linear Selector</strong></li>
+</ul>
+
+<h2>
+<a id="initialization" class="anchor" href="#initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initialization</h2>
+
+<p>Both of them accept the same arguments:</p>
+
+<ul>
+<li>
+<strong>DOMElement</strong> of the main button to use (must be the first item in the list)</li>
+<li>
+<strong>Object</strong> with the configuration:
+
+<ul>
+<li>
+<strong>minimumItems</strong>: Minimum items the list must have to arrange items freely (checkout the examples to get a better overview)</li>
+<li>
+<strong>startingAngle</strong>: Angle at which the selector will start displaying elements</li>
+</ul>
+</li>
+</ul>
+
+<p>It is structured as npm dependency, so it is easy to include in your own project. Nevertheless, if you want to use it as an independent script, just pack it up using  <code>npm run build</code> and therefore, you will be able to use it by calling <strong>window.fancySelector</strong>.</p>
+
+<h3>
+<a id="examples-of-initialization" class="anchor" href="#examples-of-initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples of initialization</h3>
+
+<h4>
+<a id="radio-selector" class="anchor" href="#radio-selector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Radio selector</h4>
+
+<ul>
+<li>Simple radio selector: </li>
+</ul>
+
+<pre><code>        fancySelector.createRadioSelector( mainButton );
+
+</code></pre>
+
+<ul>
+<li>Radio selector starting from an specific angle</li>
+</ul>
+
+<pre><code>        fancySelector.createRadioSelector( mainButton, {
+            startingAngle: fancySelector.RADS_90
+        });
+</code></pre>
+
+<ul>
+<li>Radio selector using the minimum of items to arrange them in just 90 degrees.</li>
+</ul>
+
+<pre><code>        fancySelector.createRadioSelector( mainButton, {
+            minimumItems: 3
+        });
+</code></pre>
+
+<h4>
+<a id="linear-selector" class="anchor" href="#linear-selector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linear selector</h4>
+
+<ul>
+<li>Simple linear selector: </li>
+</ul>
+
+<pre><code>        fancySelector.createLinearSelector( mainButton );
+
+</code></pre>
+
+<ul>
+<li>Linear selector starting from an specific angle</li>
+</ul>
+
+<pre><code>        fancySelector.createLinearSelector( mainButton, {
+            startingAngle: fancySelector.RADS_90
+        });
+</code></pre>
+
+<h2>
+<a id="try-it-by-yourself" class="anchor" href="#try-it-by-yourself" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Try it by yourself</h2>
+
+<p>Do as follows: </p>
+
+<ul>
+<li>Run "npm install"</li>
+<li>Run "npm run build" to compile the module.</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/bguzmanrio/vanilla-fancy-selector/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/bguzmanrio/vanilla-fancy-selector/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/bguzmanrio/vanilla-fancy-selector"></a> is maintained by <a href="https://github.com/bguzmanrio">bguzmanrio</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
